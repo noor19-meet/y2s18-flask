@@ -1,1 +1,24 @@
 <!-- Put the HTML template for your page here! -->
+<DOCTYPE! html>
+<html>
+<header>
+    <title>SOCCER</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</header>
+<body>
+    {% if likes_same_sport == true %}
+        <p>You cant see the list. I want to get:</p>
+        {% else %}
+            <p> Here is the list! the list is:</p>
+            {% endif %}
+            <h2>players:</h2>
+    <h1>My Favorite sport is Soccer!!</h1>
+    <p>Soccer is the best sport in the world because</p>
+    <ul>
+        {% for player in players %}
+        <li> {{player}}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+<html>

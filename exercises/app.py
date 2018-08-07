@@ -3,7 +3,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    pass
+    players = ["Mesut Ozil", "Pier-amerik Aubamyang", "Alexander Lacazate"]
+    return render_template(
+        "index.html",
+        players=players)
 
 if __name__ == '__main__':
    app.run(debug = True)
